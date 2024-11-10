@@ -1,117 +1,164 @@
 <!DOCTYPE html>
-<head>
-<style>
-  body { 
-    background-color: rgb(255, 255, 255); 
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px; 
-  }
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Global Reset and Body Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  .logo-container img {
-    width: 250px; 
-    height: auto;
-  }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #d0cecc;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
 
-  .container {
-    background-color: rgb(238, 237, 237);
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    
-  }
+      /* Header (Logo) */
+      .logo-container {
+        text-align: center;
+        margin-top: 20px;
+      }
 
-  input[type="text"],
-  input[type="number"] {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 2px solid #ccc;
-    font-weight: bold;
-    border-radius: 5px;
-    box-sizing: border-box;
-    
-  }
-  
+      .logo-container img {
+        width: 400px;
+        height: auto;
+      }
 
-  button, a {
-    background-color: black; 
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px 0;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+      /* Main Container */
+      .container {
+        background-color: #eeeeee;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        width: 100%;
+        max-width: 450px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        flex-grow: 1;
+        margin-top: 20px;
+      }
+      input[type="text"],
+      input[type="number"] {
+        padding: 12px;
+        margin: 10px 0;
+      }
+      input[type="text"]:hover {
+        background-color: rgb(233, 229, 229);
+      }
 
-   .college-name {
-    font-size: 50px; 
-    font-weight: bold;
-    color:black ; 
-    text-align: center;
-    margin-top: 20px;
-  }
-  .container label {
-            display: block;
-            margin-bottom: 5px;
-            width: 40%;
-            text-align: left; 
-            
+      /* Form and Input Fields */
+      .container label {
+        text-align: left;
+        font-size: 16px;
+        display: block;
+        margin: 10px 0 5px;
+        color: #333;
+      }
+
+      .container input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: not-allowed;
+      }
+
+      /* Button and Links */
+      .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .button-group a {
+        background-color: black;
+        color: white;
+        padding: 12px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .button-group a:hover {
+        background-color: #333;
+      }
+
+      /* Footer (College Name) */
+      .college-name {
+        font-size: 28px;
+        font-weight: bold;
+        color: black;
+        margin-bottom: 20px;
+      }
+
+      /* Media Queries for Responsiveness */
+      @media (min-width: 768px) {
+        body {
+          padding: 40px;
         }
-        a:hover{
-          background-color: rgb(48, 48, 48) ;
-        }
-        input[type="text"]:hover{
-          background-color: rgb(233, 229, 229);
-          cursor: auto;
+
+        .container {
+          max-width: 600px;
         }
 
-</style>
-</head>
-<body>
+        .college-name {
+          font-size: 32px;
+        }
+      }
 
-  <div class="logo-container">
-    <img src="GMIU.png" alt="College Logo">
-  </div>
+      @media (min-width: 1024px) {
+        .container {
+          max-width: 700px;
+        }
 
-  <div class="container">
-    
-   
+        .college-name {
+          font-size: 36px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header (Logo at the top) -->
+    <div class="logo-container">
+      <img src="GMIU.jpg" alt="College Logo" />
+    </div>
+
+    <!-- Main Content (Centered Form) -->
+    <div class="container">
       <label for="subjectName">Subject Name:</label>
-      <input type="text" id="subjectName" value="Web Design" readonly>
-  
+      <input type="text" id="subjectName" value="Web Design" readonly />
+
       <label for="subjectCode">Subject Code:</label>
-      <input type="text" id="subjectCode" value="BETCE13304" readonly>
-  
+      <input type="text" id="subjectCode" value="BETCE13304" readonly />
+
       <label for="studentName">Student Name:</label>
-      <input type="text" id="studentName" value="SOLANKI PARTH DINESHBHAI" readonly>
-  
+      <input type="text" id="studentName" value="SOLANKI PARTH DINESHBHAI" readonly />
+
       <label for="enNo">Enrollment Number:</label>
-      <input type="text" id="enNo" value="20230905090038" readonly>
+      <input type="text" id="enNo" value="20230905090038" readonly />
 
-    <a href="https://parthsolanki06.github.io/ALA1/">ALA-1</a>
-    <a href="https://parthsolanki06.github.io/ALA2/">ALA-2</a>
-    <a href="https://parthsolanki06.github.io/ALA3/">ALA-3</a>
-  </div>
+      <div class="button-group">
+        <a href="https://parthsolanki06.github.io/ALA1/">ALA-1</a>
+        <a href="https://parthsolanki06.github.io/ALA2/">ALA-2</a>
+        <a href="https://parthsolanki06.github.io/ALA3/">ALA-3</a>
+      </div>
+    </div>
 
-  <div class="college-name">
-    Gyanmanjari Innovative University
-  </div>
-  
-</body>
+    <!-- Footer (College Name at the bottom) -->
+    <div class="college-name">Gyanmanjari Innovative University</div>
+  </body>
 </html>
