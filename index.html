@@ -20,6 +20,7 @@
         align-items: center;
         min-height: 100vh;
         padding: 20px;
+        overflow-y: auto; /* Enable vertical scrolling */
       }
 
       /* Header (Logo) */
@@ -129,12 +130,32 @@
           font-size: 36px;
         }
       }
+
+      /* Custom Scrollbar Styles for Body */
+      body::-webkit-scrollbar {
+        width: 12px; /* Set the width of the scrollbar */
+      }
+
+      body::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Light gray background for the scrollbar track */
+        border-radius: 10px;
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: #888; /* Dark gray color for the thumb */
+        border-radius: 10px;
+        transition: background-color 0.3s ease; /* Smooth transition */
+      }
+
+      body::-webkit-scrollbar-thumb:hover {
+        background-color: #555; /* Darker gray when hovered */
+      }
     </style>
   </head>
   <body>
     <!-- Header (Logo at the top) -->
     <div class="logo-container">
-      <img src="GMIU.png" alt="College Logo" />
+      <img src="gmiu.png" alt="College Logo" />
     </div>
 
     <!-- Main Content (Centered Form) -->
@@ -146,10 +167,10 @@
       <input type="text" id="subjectCode" value="BETCE13304" readonly />
 
       <label for="studentName">Student Name:</label>
-      <input type="text" id="studentName" value="SOLANKI PARTH DINESHBHAI" readonly />
+      <input type="text" id="studentName" value="KHASIYA DHAVAL MUKESHBHAI" readonly />
 
       <label for="enNo">Enrollment Number:</label>
-      <input type="text" id="enNo" value="20230905090038" readonly />
+      <input type="text" id="enNo" value="20230905090042" readonly />
 
       <div class="button-group">
         <a href="https://parthsolanki06.github.io/ALA1/">ALA-1</a>
